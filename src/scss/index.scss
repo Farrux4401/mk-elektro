@@ -1,0 +1,32 @@
+// Импортируем SCSS компоненты
+@use "./components/_header.scss";
+@use "./components/_banner.scss";
+@use "./components/_popular-categories.scss";
+@use "./components/_our-products.scss";
+@use "./components/_news.scss";
+@import url("https://fonts.cdnfonts.com/css/sf-pro-display");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "SF Pro Display", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1080px;
+    margin: 0 auto;
+}

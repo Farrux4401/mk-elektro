@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Vite Project</title>
+</head>
+
+<body>
+    <div id="app">
+        <div class="wrapper">
+            <header class="header">
+                <div class="container">
+                    <div class="header-block">
+                        <a href="#" id="logo">
+                            <img src="/assets/img/logo.png" alt="">
+                        </a>
+                        <a href="#" class="header-block__link">Свяжитесь с нами</a>
+                        <button class="header-block__catalog"><img src="/assets/img/burger-icon.svg" alt="">
+                            Каталог</button>
+                        <div class="header-block__search">
+                            <button><img src="/assets/img/search.svg" alt=""></button>
+                            <input type="text" placeholder="Введите текст" />
+                        </div>
+                        <div class="header-block__actions">
+                            <a href="#" class="header-block__actions-link">
+                                <img src="/assets/img/bookmark.svg" alt="">
+                                Избранное
+                            </a>
+                            <a href="#" class="header-block__actions-link">
+                                <img src="/assets/img/basket.svg" alt="">
+                                Корзина
+                            </a>
+                            <a href="#" class="header-block__actions-link">
+                                <img src="/assets/img/user-icon.svg" alt="">
+                                Войти
+                            </a>
+                            <a href="#" class="header-block__actions-link">
+                                <img src="/assets/img/globus.svg" alt="user">
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="header-block__menu">
+
+                        <ul class="header-block__menu-list">
+                            <li>
+                                <button class="header-block__menu-location">
+                                    <img src="/assets/img/location.svg" alt="">
+                                    Москва
+                                </button>
+                            </li>
+                            <li><a href="#" class="header-block__menu-link">Распродажа</a></li>
+                            <li><a href="#" class="header-block__menu-link">Акции</a></li>
+                            <li><a href="#" class="header-block__menu-link">О компании</a></li>
+                            <li><a href="#" class="header-block__menu-link">Доставка</a></li>
+                            <li><a href="#" class="header-block__menu-link">Контакты</a></li>
+                        </ul>
+
+                        <div class="header-block__menu-contacts">
+                            <ul class="header-block__menu-social">
+                                <li><a href="#"><img src="/assets/img/telegram.svg" alt=""></a></li>
+                                <li><a href="#"><img src="/assets/img/youtube.svg" alt=""></a></li>
+                                <li><a href="#"><img src="/assets/img/vk.svg" alt=""></a></li>
+                            </ul>
+                            <img src="/assets/img/phone.svg" alt="">
+                            <div class="header-block__menu-contacts-links">
+                                <a href="tel:+88001005441">+8 800 100-54-41,</a>
+                                <a href="tel:+89847079798">+8 984 707-97-98</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <main class="main">
+                <section class="banner">
+                    <div class="container">
+
+                        <div class="banner-block">
+                            <!-- Swiper -->
+                            <div class="swiper mySwiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <img src="https://cdn.magloft.com/github/swiper/images/page-001.jpg" />
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="https://cdn.magloft.com/github/swiper/images/page-002.jpg" />
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="https://cdn.magloft.com/github/swiper/images/page-003.jpg" />
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="https://cdn.magloft.com/github/swiper/images/page-004.jpg" />
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="https://cdn.magloft.com/github/swiper/images/page-005.jpg" />
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="https://cdn.magloft.com/github/swiper/images/page-006.jpg" />
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="https://cdn.magloft.com/github/swiper/images/page-007.jpg" />
+                                    </div>
+                                </div>
+                                <div class="swiper-button-next"></div>
+                                <div class="swiper-button-prev"></div>
+                                <div class="swiper-scrollbar"></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="popular-categories">
+                    <div class="container">
+                        <h2 class="popular-categories__title">Популярные категории</h2>
+
+                        <div class="popular-categories__top">
+                            <p class="popular-categories__text">
+                                Мы собрали для вас лучшие категории, которые есть в нашем магазине
+                            </p>
+                            <a href="#" class="popular-categories__link">Смотреть все</a>
+                        </div>
+
+                        <div class="popular-categories__items">
+                            <div class="popular-categories__item">
+                                <p class="popular-categories__item-title">Lorem ipsum</p>
+                                <span class="popular-categories__item-text">Lorem ipsum</span>
+                                <img class="popular-categories__item-img" src="/assets/img/popular-categories-1.png"
+                                    alt="">
+                            </div>
+
+                            <div class="popular-categories__item">
+                                <p class="popular-categories__item-title">Lorem ipsum</p>
+                                <span class="popular-categories__item-text">Lorem ipsum</span>
+                                <img class="popular-categories__item-img" src="/assets/img/popular-categories-2.png"
+                                    alt="">
+                            </div>
+
+                            <div class="popular-categories__item">
+                                <p class="popular-categories__item-title">Lorem ipsum</p>
+                                <span class="popular-categories__item-text">Lorem ipsum</span>
+                                <img class="popular-categories__item-img" src="/assets/img/popular-categories-3.png"
+                                    alt="">
+                            </div>
+
+                            <div class="popular-categories__item">
+                                <p class="popular-categories__item-title">Lorem ipsum</p>
+                                <span class="popular-categories__item-text">Lorem ipsum</span>
+                                <img class="popular-categories__item-img" src="/assets/img/popular-categories-4.png"
+                                    alt="">
+                            </div>
+                            <div class="popular-categories__item-button">
+                                <p class="popular-categories__item-button-text">Оставить заявку на подбор техники</p>
+                                <a href="#" class="popular-categories__item-button-link">Заявка</a>
+                                <img class="popular-categories__item-button-img" src="/assets/img/zayavka.png" alt="">
+                            </div>
+                        </div>
+
+                        <div class="brands">
+                            <div class="brands-block">
+                                <div class="brands-block__items">
+                                    <img src="/assets/img/brand1.png" alt="">
+                                </div>
+                                <div class="brands-block__items">
+                                    <img src="/assets/img/brand2.png" alt="">
+                                </div>
+                                <div class="brands-block__items">
+                                    <img src="/assets/img/brand3.png" alt="">
+                                </div>
+                                <div class="brands-block__items">
+                                    <img src="/assets/img/brand4.png" alt="">
+                                </div>
+                                <div class="brands-block__items">
+                                    <img src="/assets/img/brand5.png" alt="">
+                                </div>
+                                <div class="brands-block__items">
+                                    <img src="/assets/img/brand6.png" alt="">
+                                </div>
+                                <div class="brands-block__items">
+                                    <img src="/assets/img/brand7.png" alt="">
+                                </div>
+                                <div class="brands-block__items">
+                                    <img src="/assets/img/brand8.png" alt="">
+                                </div>
+                                <div class="brands-block__items">
+                                    <img src="/assets/img/brand9.png" alt="">
+                                </div>
+                                <div class="brands-block__items">
+                                    <img src="/assets/img/brand10.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="our-products">
+                    <div class="container">
+                        <h2 class="our-products__title">Наши товары</h2>
+
+                        <!-- Product filters -->
+                        <div class="our-products__filters">
+                            <div class="our-products__tabs">
+                                <button class="our-products__tab active">Распродажа</button>
+                                <button class="our-products__tab">Хиты</button>
+                                <button class="our-products__tab">Товары по акции</button>
+                                <button class="our-products__tab">Новинки</button>
+                            </div>
+                            <div class="our-products__sort">
+                                <select class="our-products__select">
+                                    <option>Сначала новые</option>
+                                    <option>Сначала старые</option>
+                                    <option>Сначала дорогие</option>
+                                    <option>Сначала дешевые</option>
+                                </select>
+                                <a href="#" class="our-products__view-all">Смотреть все</a>
+                            </div>
+                        </div>
+
+                        <!-- Product grid -->
+                        <div class="our-products__grid">
+                            <!-- Product card -->
+                            <div class="product-card">
+                                <div class="product-card__badges">
+                                    <span class="badge badge--hit">Хит</span>
+                                    <span class="badge badge--recommend">Советуем</span>
+                                </div>
+                                <button class="product-card__favorite">
+                                    <img src="/assets/img/product-bookmark.svg" alt="">
+                                </button>
+                                <h3 class="product-card__title">Lorem ipsum</h3>
+                                <p class="product-card__subtitle">Lorem ipsum</p>
+                                <div class="product-card__image-block">
+                                    <img src="/assets/img/product-1.png" alt="" class="product-card__image">
+                                </div>
+                                <div class="product-card__info">
+                                    <div class="product-card__price">
+                                        <span>Цена</span>
+                                        <strong>250 ₽</strong>
+                                    </div>
+                                    <div class="product-card__quantity">
+                                        <span>Кол-во (шт.)</span>
+                                        <strong>12</strong>
+                                    </div>
+                                </div>
+                                <div class="product-card__actions">
+                                    <button class="button button--primary">Подробнее</button>
+                                    <button class="button button--secondary">Купить в один клик</button>
+                                </div>
+                            </div>
+
+                            <div class="product-card">
+                                <div class="product-card__badges">
+                                    <span class="badge badge--hit">Хит</span>
+                                    <span class="badge badge--recommend">Советуем</span>
+                                </div>
+                                <button class="product-card__favorite">
+                                    <img src="/assets/img/product-bookmark.svg" alt="">
+                                </button>
+                                <h3 class="product-card__title">Lorem ipsum</h3>
+                                <p class="product-card__subtitle">Lorem ipsum</p>
+                                <div class="product-card__image-block">
+                                    <img src="/assets/img/product-2.png" alt="" class="product-card__image">
+                                </div>
+                                <div class="product-card__info">
+                                    <div class="product-card__price">
+                                        <span>Цена</span>
+                                        <strong>250 ₽</strong>
+                                    </div>
+                                    <div class="product-card__quantity">
+                                        <span>Кол-во (шт.)</span>
+                                        <strong>12</strong>
+                                    </div>
+                                </div>
+                                <div class="product-card__actions">
+                                    <button class="button button--primary">Подробнее</button>
+                                    <button class="button button--secondary">Купить в один клик</button>
+                                </div>
+                            </div>
+
+                            <div class="product-card">
+                                <div class="product-card__badges">
+                                    <span class="badge badge--hit">Хит</span>
+                                    <span class="badge badge--recommend">Советуем</span>
+                                </div>
+                                <button class="product-card__favorite">
+                                    <img src="/assets/img/product-bookmark.svg" alt="">
+                                </button>
+                                <h3 class="product-card__title">Lorem ipsum</h3>
+                                <p class="product-card__subtitle">Lorem ipsum</p>
+                                <div class="product-card__image-block">
+                                    <img src="/assets/img/product-3.png" alt="" class="product-card__image">
+                                </div>
+                                <div class="product-card__info">
+                                    <div class="product-card__price">
+                                        <span>Цена</span>
+                                        <strong>250 ₽</strong>
+                                    </div>
+                                    <div class="product-card__quantity">
+                                        <span>Кол-во (шт.)</span>
+                                        <strong>12</strong>
+                                    </div>
+                                </div>
+                                <div class="product-card__actions">
+                                    <button class="button button--primary">Подробнее</button>
+                                    <button class="button button--secondary">Купить в один клик</button>
+                                </div>
+                            </div>
+
+                            <div class="product-card">
+                                <div class="product-card__badges">
+                                    <span class="badge badge--hit">Хит</span>
+                                    <span class="badge badge--recommend">Советуем</span>
+                                </div>
+                                <button class="product-card__favorite">
+                                    <img src="/assets/img/product-bookmark.svg" alt="">
+                                </button>
+                                <h3 class="product-card__title">Lorem ipsum</h3>
+                                <p class="product-card__subtitle">Lorem ipsum</p>
+                                <div class="product-card__image-block">
+                                    <img src="/assets/img/product-4.png" alt="" class="product-card__image">
+                                </div>
+                                <div class="product-card__info">
+                                    <div class="product-card__price">
+                                        <span>Цена</span>
+                                        <strong>250 ₽</strong>
+                                    </div>
+                                    <div class="product-card__quantity">
+                                        <span>Кол-во (шт.)</span>
+                                        <strong>12</strong>
+                                    </div>
+                                </div>
+                                <div class="product-card__actions">
+                                    <button class="button button--primary">Подробнее</button>
+                                    <button class="button button--secondary">Купить в один клик</button>
+                                </div>
+                            </div>
+
+                            <div class="product-card">
+                                <div class="product-card__badges">
+                                    <span class="badge badge--hit">Хит</span>
+                                    <span class="badge badge--recommend">Советуем</span>
+                                </div>
+                                <button class="product-card__favorite">
+                                    <img src="/assets/img/product-bookmark.svg" alt="">
+                                </button>
+                                <h3 class="product-card__title">Lorem ipsum</h3>
+                                <p class="product-card__subtitle">Lorem ipsum</p>
+                                <div class="product-card__image-block">
+                                    <img src="/assets/img/product-5.png" alt="" class="product-card__image">
+                                </div>
+                                <div class="product-card__info">
+                                    <div class="product-card__price">
+                                        <span>Цена</span>
+                                        <strong>250 ₽</strong>
+                                    </div>
+                                    <div class="product-card__quantity">
+                                        <span>Кол-во (шт.)</span>
+                                        <strong>12</strong>
+                                    </div>
+                                </div>
+                                <div class="product-card__actions">
+                                    <button class="button button--primary">Подробнее</button>
+                                    <button class="button button--secondary">Купить в один клик</button>
+                                </div>
+                            </div>
+
+                            <div class="product-card">
+                                <div class="product-card__badges">
+                                    <span class="badge badge--hit">Хит</span>
+                                    <span class="badge badge--recommend">Советуем</span>
+                                </div>
+                                <button class="product-card__favorite">
+                                    <img src="/assets/img/product-bookmark.svg" alt="">
+                                </button>
+                                <h3 class="product-card__title">Lorem ipsum</h3>
+                                <p class="product-card__subtitle">Lorem ipsum</p>
+                                <div class="product-card__image-block">
+                                    <img src="/assets/img/product-6.png" alt="" class="product-card__image">
+                                </div>
+                                <div class="product-card__info">
+                                    <div class="product-card__price">
+                                        <span>Цена</span>
+                                        <strong>250 ₽</strong>
+                                    </div>
+                                    <div class="product-card__quantity">
+                                        <span>Кол-во (шт.)</span>
+                                        <strong>12</strong>
+                                    </div>
+                                </div>
+                                <div class="product-card__actions">
+                                    <button class="button button--primary">Подробнее</button>
+                                    <button class="button button--secondary">Купить в один клик</button>
+                                </div>
+                            </div>
+
+                            <div class="product-card">
+                                <div class="product-card__badges">
+                                    <span class="badge badge--hit">Хит</span>
+                                    <span class="badge badge--recommend">Советуем</span>
+                                </div>
+                                <button class="product-card__favorite">
+                                    <img src="/assets/img/product-bookmark.svg" alt="">
+                                </button>
+                                <h3 class="product-card__title">Lorem ipsum</h3>
+                                <p class="product-card__subtitle">Lorem ipsum</p>
+                                <div class="product-card__image-block">
+                                    <img src="/assets/img/product-7.png" alt="" class="product-card__image">
+                                </div>
+                                <div class="product-card__info">
+                                    <div class="product-card__price">
+                                        <span>Цена</span>
+                                        <strong>250 ₽</strong>
+                                    </div>
+                                    <div class="product-card__quantity">
+                                        <span>Кол-во (шт.)</span>
+                                        <strong>12</strong>
+                                    </div>
+                                </div>
+                                <div class="product-card__actions">
+                                    <button class="button button--primary">Подробнее</button>
+                                    <button class="button button--secondary">Купить в один клик</button>
+                                </div>
+                            </div>
+
+                            <div class="product-card">
+                                <div class="product-card__badges">
+                                    <span class="badge badge--hit">Хит</span>
+                                    <span class="badge badge--recommend">Советуем</span>
+                                </div>
+                                <button class="product-card__favorite">
+                                    <img src="/assets/img/product-bookmark.svg" alt="">
+                                </button>
+                                <h3 class="product-card__title">Lorem ipsum</h3>
+                                <p class="product-card__subtitle">Lorem ipsum</p>
+                                <div class="product-card__image-block">
+                                    <img src="/assets/img/product-8.png" alt="" class="product-card__image">
+                                </div>
+                                <div class="product-card__info">
+                                    <div class="product-card__price">
+                                        <span>Цена</span>
+                                        <strong>250 ₽</strong>
+                                    </div>
+                                    <div class="product-card__quantity">
+                                        <span>Кол-во (шт.)</span>
+                                        <strong>12</strong>
+                                    </div>
+                                </div>
+                                <div class="product-card__actions">
+                                    <button class="button button--primary">Подробнее</button>
+                                    <button class="button button--secondary">Купить в один клик</button>
+                                </div>
+                            </div>
+                            <!-- Additional product cards can be copied and modified as needed -->
+                        </div>
+                    </div>
+                </section>
+
+                <section class="news">
+                    <div class="container">
+                        <div class="news__header">
+                            <h2 class="news__title">Новости</h2>
+                            <a href="#" class="news__view-all">Все новости</a>
+                        </div>
+
+                        <div class="news__grid">
+                            <!-- News Card 1 -->
+                            <div class="news-card">
+                                <h3 class="news-card__title">
+                                    <div class="news-card__date">23.10.2024</div>
+                                    <a href="#">Lorem ipsum dolor amet, consectetur adipiscing elit</a>
+                                </h3>
+                                <div class="news-card__image">
+                                    <img src="/assets/img/news-image.jpg" alt="News image">
+                                </div>
+                            </div>
+
+                            <!-- News Card 2 -->
+                            <div class="news-card">
+                                <h3 class="news-card__title">
+                                    <div class="news-card__date">23.10.2024</div>
+                                    <a href="#">Lorem ipsum dolor amet, consectetur adipiscing elit</a>
+                                </h3>
+                                <div class="news-card__image">
+                                    <img src="/assets/img/news-image.jpg" alt="News image">
+                                </div>
+                            </div>
+
+                            <!-- News Card 3 -->
+                            <div class="news-card">
+                                <h3 class="news-card__title">
+                                    <div class="news-card__date">23.10.2024</div>
+                                    <a href="#">Lorem ipsum dolor amet, consectetur adipiscing elit</a>
+                                </h3>
+                                <div class="news-card__image">
+                                    <img src="/assets/img/news-image.jpg" alt="News image">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+            </main>
+        </div>
+    </div>
+    <script type="module" src="../js/main.js"></script>
+</body>
+
+</html>
