@@ -6,6 +6,7 @@
 @use "./components/_news.scss";
 @use "./components/_footer.scss";
 @use "./components/_catalog.scss";
+@use "./components/_city-select.scss";
 
 @import url("https://fonts.cdnfonts.com/css/sf-pro-display");
 
@@ -28,7 +29,7 @@ h6 {
     margin: 0;
     padding: 0;
 }
-a{
+a {
     display: inline-block;
 }
 .container {

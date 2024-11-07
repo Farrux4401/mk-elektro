@@ -4,6 +4,10 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css"
+        integrity="sha512-nMNlpuaDPrqlEls3IX/Q56H36qvBASwb3ipuo3MxeWbsQB1881ox0cRv7UPTgBlriqoynt35KjEwgGUeUXIPnw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>My Vite Project</title>
 </head>
 
@@ -11,12 +15,13 @@
     <div id="app">
         <div class="wrapper">
             <header class="header">
-
+                <div class="catalog-bg" style="display: none;"></div>
                 <div class="catalog-dropdown" style="display: none;">
                     <div class="catalog-aside">
                         <div class="catalog-section">
                             <div class="dropdown">
-                                <button class="dropdown-toggle">Товары</button>
+                                <button class="dropdown-toggle">Товары <img src="/assets/img/dropdown-arrow.svg"
+                                        alt=""></button>
                                 <div class="dropdown-menu">
                                     <a href="#" class="dropdown-item">Сортировальная техника <span>(0000)</span></a>
                                     <a href="#" class="dropdown-item">Грузовой транспорт <span>(0000)</span> </a>
@@ -30,14 +35,12 @@
 
                         <div class="catalog-section">
                             <div class="dropdown">
-                                <button class="dropdown-toggle">Товары</button>
+                                <button class="dropdown-toggle">Услуги <img src="/assets/img/dropdown-arrow.svg"
+                                        alt=""></button>
                                 <div class="dropdown-menu">
-                                    <a href="#" class="dropdown-item">Сортировальная техника (0000)</a>
-                                    <a href="#" class="dropdown-item">Грузовой транспорт (0000) </a>
-                                    <a href="#" class="dropdown-item">Складская техника (0000) </a>
-                                    <a href="#" class="dropdown-item">Дорожная техника (0000) </a>
-                                    <a href="#" class="dropdown-item">Коммунальная техника (0000) </a>
-                                    <a href="#" class="dropdown-item">Автобусы (0000) </a>
+                                    <a href="#" class="dropdown-item">Банковские гарантии</a>
+                                    <a href="#" class="dropdown-item">Страхование </a>
+                                    <a href="#" class="dropdown-item">Лизинг </a>
                                 </div>
                             </div>
                         </div>
@@ -88,17 +91,37 @@
                     </div>
 
                     <div class="header-block__menu">
-
                         <ul class="header-block__menu-list">
                             <li>
-                                <button class="header-block__menu-location">
+                                <!-- <button class="header-block__menu-location">
                                     <img src="/assets/img/location.svg" alt="">
                                     Москва
-                                </button>
+                                </button> -->
+
+                                <select class="js-example-basic-single" name="state">
+                                    <option value="AL">Москва</option>
+                                    <option value="WY">Свердловск</option>
+                                    <option value="WY">Екатеринбург</option>
+                                    <option value="WY">Самара</option>
+                                    <option value="WY">Краснодар</option>
+                                </select>
+
                             </li>
                             <li><a href="#" class="header-block__menu-link">Распродажа</a></li>
                             <li><a href="#" class="header-block__menu-link">Акции</a></li>
-                            <li><a href="#" class="header-block__menu-link">О компании</a></li>
+                            <li>
+                                <div class="dropdown-sub">
+                                    <button class="header-block__menu-link dropdown-toggle-sub">О компании <img src="/assets/img/dropdown-arrow.svg" alt=""></button>
+                                    <div class="dropdown__submenu">
+                                        <a href="#" class="dropdown__link">Краткая информация</a>
+                                        <a href="#" class="dropdown__link">История</a>
+                                        <a href="#" class="dropdown__link">Реквизиты</a>
+                                        <a href="#" class="dropdown__link">Новости</a>
+                                        <a href="#" class="dropdown__link">Адреса магазинов</a>
+                                        <a href="#" class="dropdown__link">Отзывы</a>
+                                    </div>
+                                </div>
+                            </li>
                             <li><a href="#" class="header-block__menu-link">Доставка</a></li>
                             <li><a href="#" class="header-block__menu-link">Контакты</a></li>
                         </ul>
@@ -617,6 +640,12 @@
         </div>
     </div>
     <script type="module" src="../js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"
+        integrity="sha512-2ImtlRlf2VVmiGZsjm9bEyhjGW4dU7B6TNwh/hx/iSByxNENtj3WVE6o/9Lj4TJeVXPi4bnOIMXFIJJAeufa0A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </body>
 
 </html>

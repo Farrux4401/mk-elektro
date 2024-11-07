@@ -4,18 +4,22 @@ import $ from 'jquery';
 $(function () {
     const $catalogButton = $('.header-block__catalog');
     const $catalogDropdown = $('.catalog-dropdown');
+    const $catalogBg = $(".catalog-bg")
+    
 
 
-    // Toggle dropdown on button click
+    // Toggle dropdown and background on button click
     $catalogButton.on('click', function (e) {
         e.stopPropagation();
         $catalogDropdown.slideToggle(200);
+        $catalogBg.toggle();
     });
 
-    // Close dropdown when clicking outside
+    // Close dropdown and hide background when clicking outside
     $(document).on('click', function (e) {
         if (!$(e.target).closest('.catalog-dropdown').length && !$(e.target).closest('.header-block__catalog').length) {
             $catalogDropdown.slideUp(200);
+            $catalogBg.hide();
         }
     });
 
@@ -47,37 +51,31 @@ $(document).ready(function () {
 });
 
 
-$(document).ready(function () {
-    // Show catalog content when hovering over any dropdown item
-    $(".dropdown-item").mouseenter(function () {
-        $(".catalog-content").addClass("visible");
+$(function () {
+    const $dropdownItem = $(".dropdown-item");
+    const $catalogContent = $(".catalog-content");
+    let hoverTimeout;
+
+    // Show catalog content with delay when hovering over dropdown item
+    $dropdownItem.on('mouseenter', function () {
+        clearTimeout(hoverTimeout);
+        $catalogContent.addClass("visible");
     });
 
-    // Hide catalog content when the mouse leaves both dropdown items and catalog content area
-    $(".dropdown-item, .catalog-content").mouseleave(function () {
-        $(".catalog-content").removeClass("visible");
+    // Hide catalog content with slight delay to prevent flickering
+    $(".dropdown-item, .catalog-content").on('mouseleave', function (e) {
+        hoverTimeout = setTimeout(() => {
+            if (!$(e.relatedTarget).closest('.dropdown-item').length &&
+                !$(e.relatedTarget).closest('.catalog-content').length) {
+                $catalogContent.removeClass("visible");
+            }
+        }, 200);
+    });
+
+    // Keep content visible when moving between items
+    $catalogContent.on('mouseenter', function () {
+        clearTimeout(hoverTimeout);
     });
 });
 
-// ******************************************
-$(document).ready(function () {
-    // Show .menu-catalog when hovering over .dropdown-toggle
-    $(".dropdown-toggle").hover(
-        function () {
-            $(".dropdown-item").addClass("_active"); // Add _active class on hover
-        },
-        function () {
-            $(".dropdown-item").removeClass("_active"); // Remove _active class when mouse leaves
-        }
-    );
 
-    // Optional: Keep .menu-catalog visible if hovering over it
-    $(".dropdown-item").hover(
-        function () {
-            $(this).addClass("_active");
-        },
-        function () {
-            $(this).removeClass("_active");
-        }
-    );
-});

@@ -144,6 +144,96 @@
             }
         }
 
+        .dropdown-sub {
+            position: relative;
+            display: inline-block;
+
+            .dropdown-toggle-sub {
+                background: none;
+                border: none;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                color: inherit;
+                font-size: inherit;
+                padding: 0;
+
+                img {
+                    width: 12px;
+                    height: 12px;
+                    transition: transform 0.3s ease;
+                }
+            }
+
+            .dropdown__submenu {
+                // Changed from dropdown-menu
+                position: absolute;
+                top: 30px;
+                left: 0;
+                background: rgba(246, 248, 253, 1);
+                min-width: 210px;
+                box-shadow: 0px 2px 12.6px 0px rgba(0, 0, 0, 0.18);
+
+                border-radius: 8px;
+                padding: 10px;
+                opacity: 0;
+                visibility: hidden;
+                transform: translateY(10px);
+                transition: all 0.3s ease;
+                z-index: 100;
+            }
+
+            .dropdown__link {
+                // Changed from dropdown-item
+                font-size: 16px;
+                font-weight: 500;
+                line-height: 19.09px;
+                text-align: left;
+
+                display: block;
+                padding: 10px 15px;
+                color: #333;
+                text-decoration: none;
+                transition: background-color 0.2s ease;
+                border-radius: 8px;
+
+                &:hover {
+                    background: rgba(222, 0, 43, 1);
+                    color: #fff;
+                }
+            }
+
+            // Hover effect
+            &:hover {
+                .dropdown__submenu {
+                    // Updated selector
+                    opacity: 1;
+                    visibility: visible;
+                    transform: translateY(0);
+                }
+
+                .dropdown-toggle-sub img {
+                    transform: rotate(180deg);
+                }
+            }
+        }
+
+        // Add this to your existing header menu styles
+        .header-block__menu-list {
+            li {
+                position: relative;
+            }
+        }
+
+        .header-block__menu-link {
+            &.dropdown-toggle {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+            }
+        }
+
         .header-block__menu-contacts {
             display: flex;
             align-items: center;
