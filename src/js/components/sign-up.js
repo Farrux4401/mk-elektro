@@ -1,4 +1,4 @@
-import jQuery from 'jquery';
+import $ from 'jquery';
 
 
 
@@ -29,28 +29,29 @@ $(document).ready(function () {
     $('.modal__content').on('click', function (e) {
         e.stopPropagation();
     });
-});
 
-// Phone input formatting
-$('.modal__phone-input').on('input', function () {
-    let value = $(this).val().replace(/\D/g, '');
-    let formattedValue = '';
 
-    if (value.length > 0) {
-        formattedValue += value.substring(0, 3);
-        if (value.length > 3) {
-            formattedValue += '-' + value.substring(3, 6);
+    // Phone input formatting
+    $('.modal__phone-input').on('input', function () {
+        let value = $(this).val().replace(/\D/g, '');
+        let formattedValue = '';
+
+        if (value.length > 0) {
+            formattedValue += value.substring(0, 3);
+            if (value.length > 3) {
+                formattedValue += '-' + value.substring(3, 6);
+            }
+            if (value.length > 6) {
+                formattedValue += '-' + value.substring(6, 8);
+            }
+            if (value.length > 8) {
+                formattedValue += '-' + value.substring(8, 10);
+            }
         }
-        if (value.length > 6) {
-            formattedValue += '-' + value.substring(6, 8);
-        }
-        if (value.length > 8) {
-            formattedValue += '-' + value.substring(8, 10);
-        }
-    }
 
-    $(this).val(formattedValue);
+        $(this).val(formattedValue);
 
+    });
 });
 
 
