@@ -32,9 +32,9 @@ $(document).ready(function () {
     });
 
     // Open sign in modal when clicking login button
-    // $('#openPopup').on('click', function (e) {
-    //     e.preventDefault();
-    //     $signInModal.show();
-    //     $('body').css('overflow', 'hidden'); // Prevent body scroll
-    // });
+    $('#openPopup').on('click', function (e) {
+        e.preventDefault();
+        $signInModal.show();
+        $('body').css('overflow', 'hidden'); // Prevent body scroll
+    });
 });

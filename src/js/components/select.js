@@ -1,6 +1,3 @@
-// Import jQuery and set it as a global variable
-import jquery from 'jquery';
-window.$ = window.jQuery = $; // Make jQuery globally available
 import select2 from 'select2';
 
 $(function () {
@@ -8,4 +5,8 @@ $(function () {
         placeholder: "Введите текст",
         allowClear: false
     });
+});
+
+$('.js-example-basic-single').one('select2:open', function (e) {
+    $('input.select2-search__field').prop('placeholder', 'Введите текст');
 });

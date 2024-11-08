@@ -5,53 +5,67 @@ import $ from 'jquery';
 // Modal functionality
 $(document).ready(function () {
     // Open modal
-    $('#openPopup').on('click', function (e) {
+    $('[data-open-modal]').on('click', function (e) {
         e.preventDefault();
-        $('#registrationModal').fadeIn(300);
+        const targetModal = $(this).data('open-modal');
+        $(`#${targetModal}`).fadeIn(300);
         $('body').css('overflow', 'hidden');
     });
 
     // Close modal
     $('.modal__close').on('click', function () {
-        $('#registrationModal').fadeOut(300);
+        $(this).closest('.modal').fadeOut(300);
         $('body').css('overflow', '');
     });
 
     // Close modal when clicking outside
     $(window).on('click', function (e) {
         if ($(e.target).is('.modal')) {
-            $('#registrationModal').fadeOut(300);
+            $(e.target).fadeOut(300);
             $('body').css('overflow', '');
         }
     });
 
-    // Prevent modal from closing when clicking inside
-    $('.modal__content').on('click', function (e) {
-        e.stopPropagation();
-    });
+    // ... rest of the code remains the same ...
 
 
-    // Phone input formatting
-    $('.modal__phone-input').on('input', function () {
-        let value = $(this).val().replace(/\D/g, '');
-        let formattedValue = '';
-
-        if (value.length > 0) {
-            formattedValue += value.substring(0, 3);
-            if (value.length > 3) {
-                formattedValue += '-' + value.substring(3, 6);
-            }
-            if (value.length > 6) {
-                formattedValue += '-' + value.substring(6, 8);
-            }
-            if (value.length > 8) {
-                formattedValue += '-' + value.substring(8, 10);
-            }
-        }
-
-        $(this).val(formattedValue);
-
-    });
 });
 
 
+
+const $signInModal = $('#signInModal');
+
+// Add to your existing modal.js file
+$('[data-open-modal="passwordRecovery"]').on('click', function (e) {
+    e.preventDefault();
+    $('#passwordRecoveryModal').fadeIn(300);
+    $('body').css('overflow', 'hidden');
+    $signInModal.hide();
+    // $registrationModal.show();
+});
+
+
+// Add to your existing modal.js file
+$('.modal__form').on('submit', function (e) {
+    e.preventDefault();
+    const email = $(this).find('input[type="email"]').val();
+
+    // Example validation - replace with your actual validation logic
+    if (!isValidEmail(email)) {
+        $(this).find('input[type="email"]')
+            .addClass('modal__input--error')
+            .siblings('.modal__error')
+            .show();
+    } else {
+        // Proceed with password recovery
+        $(this).find('input[type="email"]')
+            .removeClass('modal__input--error')
+            .siblings('.modal__error')
+            .hide();
+    }
+});
+
+function isValidEmail(email) {
+    // Add your email validation logic here
+    return /\S+@\S+\.\S+/.test(email);
+}

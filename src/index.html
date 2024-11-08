@@ -68,8 +68,17 @@
                         <button class="header-block__catalog"><img src="/assets/img/burger-icon.svg" alt="">
                             Каталог</button>
                         <div class="header-block__search">
-                            <button><img src="/assets/img/search.svg" alt=""></button>
-                            <input type="text" placeholder="Введите текст" />
+                            <!-- <button><img src="/assets/img/search.svg" alt=""></button>
+                            <input type="text" placeholder="Введите текст" /> -->
+
+                            <select class="search-select" name="state">
+                                <optgroup label="Group Name">
+                                    <option>Nested option</option>
+                                </optgroup>
+                                <optgroup label="Group Name">
+                                    <option>Nested option</option>
+                                </optgroup>
+                            </select>
                         </div>
                         <div class="header-block__actions">
                             <a href="#" class="header-block__actions-link">
@@ -84,20 +93,23 @@
                                 <img src="/assets/img/user-icon.svg" alt="">
                                 Войти
                             </button>
-                            <a href="#" class="header-block__actions-link">
-                                <img src="/assets/img/globus.svg" alt="user">
-                            </a>
+                            <div class="dropdown">
+                                <button class="dropdown-toggle">
+                                    <img src="/assets/img/globus.svg" alt="Language/Currency" />
+                                </button>
+                                <div class="dropdown-menu">
+                                    <div class="dropdown-item active">Русский</div>
+                                    <div class="dropdown-item">English</div>
+                                    <div class="dropdown-item">₽</div>
+                                    <div class="dropdown-item">$</div>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
                     <div class="header-block__menu">
                         <ul class="header-block__menu-list">
                             <li>
-                                <!-- <button class="header-block__menu-location">
-                                    <img src="/assets/img/location.svg" alt="">
-                                    Москва
-                                </button> -->
-
                                 <select class="js-example-basic-single" name="state">
                                     <option value="AL">Москва</option>
                                     <option value="WY">Свердловск</option>
@@ -651,8 +663,6 @@
 
 
 
-
-
     <!-- Modal -->
     <div class="modal" id="registrationModal">
         <div class="modal__content">
@@ -723,13 +733,16 @@
                     <label>Пароль</label>
                     <input type="password" placeholder="Введите пароль">
                 </div>
-                <div class="modal__forgot">
-                    <a href="#">Забыли пароль?</a>
+                <div class="modal-forgot__block">
+                    <div class="modal__forgot">
+                        <a href="#" data-open-modal="passwordRecovery">Забыли пароль?</a>
+                    </div>
+                    <p class="modal__register">
+                        <a href="#">Еще нет учетной записи?</a>
+                    </p>
                 </div>
                 <button type="submit" class="modal__submit">Войти</button>
-                <p class="modal__register">
-                    <a href="#">Еще нет учетной записи?</a>
-                </p>
+
 
                 <div class="modal__social">
                     <button type="button" class="modal__social-btn modal__social-btn--google">
@@ -746,6 +759,42 @@
     </div>
 
     <!-- ... existing code ... -->
+
+    <!-- Password Recovery Modal -->
+    <div class="modal" id="passwordRecoveryModal">
+        <div class="modal__content">
+            <button class="modal__close">&times;</button>
+            <h2 class="modal__title">Востановление пароля</h2>
+            <form class="modal__form">
+                <div class="modal__field">
+                    <label>Новый пароль</label>
+                    <input type="password" placeholder="Придумайте пароль">
+                </div>
+                <div class="modal__field">
+                    <label>Повторите пароль</label>
+                    <input type="password" placeholder="Введите пароль">
+                </div>
+                <button type="submit" class="modal__submit">Войти</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Password Recovery Email Modal -->
+    <div class="modal" id="passwordRecoveryEmailModal">
+        <div class="modal__content">
+            <button class="modal__close">&times;</button>
+            <h2 class="modal__title">Востановление пароля</h2>
+            <form class="modal__form">
+                <div class="modal__field">
+                    <label>Электронная почта</label>
+                    <input type="email" placeholder="Введите почту" class="modal__input modal__input--error">
+                    <span class="modal__error">Такая почта не зарегистрированна</span>
+                </div>
+                <button type="submit" class="modal__submit">Войти</button>
+            </form>
+        </div>
+    </div>
+
 </body>
 
 </html>
