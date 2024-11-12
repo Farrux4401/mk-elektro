@@ -6,21 +6,6 @@ $header-bg: #f1f1f1;
 .search-container {
     position: relative;
     border-radius: 6px;
-    // &:focus {
-    //     position: absolute;
-    //     top: 0;
-    //     left: 0;
-    //     z-index: 3;
-    //     width: 540px; // Change width on focus
-    //     outline: none; // Optional: remove outline on focus
-    // }
-    // &.expanded {
-    //     // New class for expanded width
-    //     width: 540px; // Change width when expanded
-    //     position: absolute;
-    //     left: 404px;
-    //     top: 17px;
-    // }
     &:focus {
         outline: none; // Optional: remove outline on focus
     }
@@ -36,7 +21,7 @@ $header-bg: #f1f1f1;
             background-color: rgba(222, 0, 43, 1);
             padding: 10px;
             border-radius: 6px;
-            z-index: 1000;
+            z-index: 12;
         }
     }
     input {

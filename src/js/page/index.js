@@ -6,3 +6,4 @@ import '../components/sign-up.js';
 import '../components/sign-in.js';
 import '../components/lang.js';
 import '../components/search-select.js';
+import './login.js';

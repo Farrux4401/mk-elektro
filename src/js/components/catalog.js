@@ -1,5 +1,3 @@
-import $ from 'jquery';
-
 
 $(function () {
     const $catalogButton = $('.header-block__catalog');

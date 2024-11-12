@@ -1,8 +1,8 @@
-.dropdown {
+.dropdown-lang {
     position: relative;
     display: inline-block;
 
-    &-toggle {
+    .dropdown-toggle-lang {
         background: none;
         border: none;
         cursor: pointer;
@@ -17,7 +17,7 @@
         }
     }
 
-    &-menu {
+    .dropdown-menu-lang {
         display: none;
         position: absolute;
         background: #fff;
@@ -33,7 +33,7 @@
         }
     }
 
-    &-item {
+    .dropdown-item {
         padding: 10px 15px;
         cursor: pointer;
         font-size: 14px;
