@@ -118,3 +118,46 @@
         }
     }
 }
+
+@media (max-width: 768px) {
+    .popular-categories {
+        padding: 25px 15px;
+    }
+    .brands {
+        padding: 25px 15px;
+    }
+    .popular-categories .brands .brands-block {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .popular-categories .brands .brands-block .brands-block__items {
+        width: 100%;
+        padding: 10px;
+    }
+    .popular-categories .popular-categories__items {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .popular-categories .popular-categories__items .popular-categories__item {
+        width: 100%;
+        padding: 10px;
+    }
+    .popular-categories .popular-categories__top {
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .popular-categories .popular-categories__items {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .popular-categories .popular-categories__items .popular-categories__item {
+        width: 100%;
+        padding: 10px;
+    }
+    .popular-categories .popular-categories__items .popular-categories__item-button {
+        width: 100%;
+    }
+}

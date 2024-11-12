@@ -80,3 +80,11 @@
         color: #8e95a6;
     }
 }
+
+@media (max-width: 768px) {
+    .footer .footer-content {
+        flex-wrap: wrap;
+        gap: 20px;
+        padding: 10px 15px;
+    }
+}

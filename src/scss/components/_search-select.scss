@@ -14,47 +14,47 @@ $header-bg: #f1f1f1;
     //     width: 540px; // Change width on focus
     //     outline: none; // Optional: remove outline on focus
     // }
-    &.expanded {
-        // New class for expanded width
-        width: 540px; // Change width when expanded
-        position: absolute;
-        left: 404px;
-        top: 17px;
-    }
+    // &.expanded {
+    //     // New class for expanded width
+    //     width: 540px; // Change width when expanded
+    //     position: absolute;
+    //     left: 404px;
+    //     top: 17px;
+    // }
     &:focus {
         outline: none; // Optional: remove outline on focus
     }
-    &::after {
-        content: "";
-        background-image: url("/assets/img/search.svg");
-        background-repeat: no-repeat;
-        background-position-x: 10px;
-        background-position-y: center;
-        display: block;
-        width: 20px;
-        height: 20px;
-        position: absolute;
-        top: 0px;
-        left: 0px;
-        background-color: rgba(222, 0, 43, 1);
-        padding: 10px;
-        border-radius: 6;
+    .search-input {
+        position: relative;
+        border-radius: 6px;
+        overflow: hidden;
+        .search-icon {
+            display: block;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            background-color: rgba(222, 0, 43, 1);
+            padding: 10px;
+            border-radius: 6px;
+            z-index: 1000;
+        }
     }
     input {
         display: block;
         width: 100%;
         padding: 10px;
-        padding-left: 40px;
+        padding-left: 45px;
         border: 1px solid $dropdown-border;
         border-radius: 6px;
         font-size: 16px;
-        overflow: hidden;
         z-index: 11;
         transition: width 0.3s ease; // Add transition for width
+        position: relative;
+        background: rgba(232, 234, 243, 1);
     }
 
     .search-dropdown {
-        width: 540px;
+        // width: 540px;
         position: absolute;
         top: 100%;
         left: 0;

@@ -5,7 +5,7 @@ $(function () {
     const $catalogButton = $('.header-block__catalog');
     const $catalogDropdown = $('.catalog-dropdown');
     const $catalogBg = $(".catalog-bg")
-    
+
 
 
     // Toggle dropdown and background on button click
@@ -30,9 +30,9 @@ $(function () {
 });
 
 
-$(document).ready(function () {
+$(function () {
     // Toggle the dropdown menu for the clicked dropdown only
-    $(".dropdown-toggle").click(function (event) {
+    $(".dropdown-toggle").on('click', function (event) {
         event.preventDefault();
 
         // Close any open dropdowns except for the one clicked
@@ -43,7 +43,7 @@ $(document).ready(function () {
     });
 
     // Close dropdowns if clicking outside of them
-    $(document).click(function (event) {
+    $(document).on('click', function (event) {
         if (!$(event.target).closest(".dropdown").length) {
             $(".dropdown-menu").hide();
         }

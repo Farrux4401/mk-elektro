@@ -16,7 +16,7 @@ $(document).ready(function () {
         $(this).toggleClass('expanded')
     })
 
-    // $(window).on('click', function () {
-    //     $('.search-container').removeClass('expanded')
-    // })
+    $(window).on('click', function () {
+        $('.search-container').removeClass('expanded')
+    })
 });

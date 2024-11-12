@@ -49,3 +49,12 @@
         }
     }
 }
+
+@media (max-width: 480px) {
+    .banner {
+        padding: 25px 15px;
+    }
+    .swiper-scrollbar.swiper-scrollbar-horizontal {
+        width: calc(82% - 2 * var(--swiper-scrollbar-sides-offset, 1%)) !important;
+    }
+}

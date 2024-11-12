@@ -14,7 +14,9 @@
 <body>
     <div id="app">
         <div class="wrapper">
+
             <header class="header">
+
                 <div class="catalog-bg" style="display: none;"></div>
                 <div class="catalog-dropdown" style="display: none;">
                     <div class="catalog-aside">
@@ -64,12 +66,21 @@
                         <a href="#" id="logo">
                             <img src="/assets/img/logo.png" alt="">
                         </a>
+
+
                         <a href="#" class="header-block__link">Свяжитесь с нами</a>
+
                         <button class="header-block__catalog"><img src="/assets/img/burger-icon.svg" alt="">
                             Каталог</button>
+                        <button class="mobile-menu__toggle">
+                            <img src="/assets/img/burger-icon.svg" alt="">
+                        </button>
                         <div class="header-block__search">
                             <div class="search-container">
-                                <input type="text" id="search-input" placeholder="Введите текст" />
+                                <div class="search-input">
+                                    <input type="text" id="search-input" placeholder="Введите текст" />
+                                    <img class="search-icon" src="/assets/img/search.svg" alt="">
+                                </div>
                                 <div class="search-dropdown" id="dropdown">
                                     <div class="search-dropdown-header">Ранее искали</div>
                                     <div class="search-dropdown-item">Лампочка дневного света</div>
@@ -154,10 +165,67 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="container">
+                    <!-- Mobile Menu -->
+                    <div class="mobile-menu">
+                        <div class="mobile-menu__header">
+                            <h2>Login</h2>
+                            <button class="mobile-menu__close">&times;</button>
+                        </div>
+                        <!--  -->
+                        <a href="#" class="header-block__link header-block__link-mobile">Свяжитесь с нами</a>
+                        <div class="header-block__menu header-block__menu-mobile">
+                            <ul class="header-block__menu-list">
+                                <li>
+                                    <select class="form-control" id="js-example-basic-single" name="state">
+                                        <option value="AL">Москва</option>
+                                        <option value="WY">Свердловск</option>
+                                        <option value="WY">Екатеринбург</option>
+                                        <option value="WY">Самара</option>
+                                        <option value="WY">Краснодар</option>
+                                    </select>
+                                </li>
+                                <li><a href="#" class="header-block__menu-link">Распродажа</a></li>
+                                <li><a href="#" class="header-block__menu-link">Акции</a></li>
+                                <li>
+                                    <div class="dropdown-sub">
+                                        <button class="header-block__menu-link dropdown-toggle-sub">О компании <img
+                                                src="/assets/img/dropdown-arrow.svg" alt=""></button>
+                                        <div class="dropdown__submenu">
+                                            <a href="#" class="dropdown__link">Краткая информация</a>
+                                            <a href="#" class="dropdown__link">История</a>
+                                            <a href="#" class="dropdown__link">Реквизиты</a>
+                                            <a href="#" class="dropdown__link">Новости</a>
+                                            <a href="#" class="dropdown__link">Адреса магазинов</a>
+                                            <a href="#" class="dropdown__link">Отзывы</a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li><a href="#" class="header-block__menu-link">Доставка</a></li>
+                                <li><a href="#" class="header-block__menu-link">Контакты</a></li>
+                            </ul>
+
+                            <div class="header-block__menu-contacts">
+                                <ul class="header-block__menu-social">
+                                    <li><a href="#"><img src="/assets/img/telegram.svg" alt=""></a></li>
+                                    <li><a href="#"><img src="/assets/img/youtube.svg" alt=""></a></li>
+                                    <li><a href="#"><img src="/assets/img/vk.svg" alt=""></a></li>
+                                </ul>
+                                <img src="/assets/img/phone.svg" alt="">
+                                <div class="header-block__menu-contacts-links">
+                                    <a href="tel:+88001005441">+8 800 100-54-41,</a>
+                                    <a href="tel:+89847079798">+8 984 707-97-98</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </header>
             <main class="main">
                 <section class="banner">
                     <div class="container">
+                        <a href="recover-password.html">Login Us</a>
                         <div class="banner-block">
                             <!-- Swiper -->
                             <div class="swiper mySwiper">
@@ -660,10 +728,17 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"
         integrity="sha512-2ImtlRlf2VVmiGZsjm9bEyhjGW4dU7B6TNwh/hx/iSByxNENtj3WVE6o/9Lj4TJeVXPi4bnOIMXFIJJAeufa0A=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="/bpopup-master/jquery.bpopup.min.js"></script>
 
 
 
-
+    <!-- <div id="popup_this">
+        <span class="button b-close">
+            <span>X</span>
+        </span>
+        <h3>A nice ad goes here!</h3>
+        <p>Nulla at nunc posuere, dictum sem sed, tristique mi.</p>
+    </div> -->
     <!-- Modal -->
     <div class="modal" id="registrationModal">
         <div class="modal__content">

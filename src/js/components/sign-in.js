@@ -1,3 +1,8 @@
+$(document).ready(function () {
+    $('#popup_this').bPopup();
+});
+
+
 
 $(document).ready(function () {
     // Modal toggle functionality
